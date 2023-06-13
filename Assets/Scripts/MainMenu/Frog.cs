@@ -91,7 +91,7 @@ public class Frog : MonoBehaviour
   
     public void Update()
     {
-        //TODO: Система еды и любви
+
         _timerFoodAndLove += Time.deltaTime;
         if (_timerFoodAndLove > 0.3f && GameMaster.Data.CurrentLevel <= 20)
         {

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public int Type;
     private bool _destroyed = false;
-
+    public int Type;
     public bool IsMoving = false;
 
-    //Здесь board наблюдает за каждым тайлом, это плохо?
     public System.Action OnMoveAnimEnd;
     public System.Action OnDestroyAnimEnd;
 
@@ -102,7 +100,6 @@ public class Tile : MonoBehaviour
 
     private void onMoveAnimEnd()
     {
-
         SoundMaster.PlayOneShot("Clack");
         IsMoving = false;
         OnMoveAnimEnd?.Invoke();
